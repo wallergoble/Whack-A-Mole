@@ -1,32 +1,84 @@
-.background {
-  height: 281px;
-  width: 100%;
-  background-size: cover;
-  background-position: center bottom;
-  background: url('http://i.imgur.com/8Ot1b00.jpg');
+@import "breakpoint";
+$small-up: 768px;
+$large-up: 900px;
+
+body {
+  min-height: 100vh;
   display: flex;
-  align-items: flex-end;
   justify-content: center;
+  align-items: center;
+  background: aquamarine;
+  @include breakpoint($small-up) {
+    background: navajowhite;
+  }
+  @include breakpoint($large-up) {
+    background: navajowhite;
+  }
 }
 
+counter-container {
 
-.row {
-  width: 100%;
-  height: 60px;
+  width: 300px;
+  height: 300px;
+  background: skyblue;
+  align-items: flex-start;
+  border: 1px solid red;
+}
+
+.mole-container {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: nowrap;
-  border: 1px solid black;
-}
-.wrapper {
-  flex: 1 1 auto;
+  justify-content: center;
+  align-items: center;
 }
 .hole {
-
-  background: darken(#263238,20%);
-  height: 60px;
+  position: relative;
   width: 200px;
+  height: 90px;
+  background: rgba(black, 0.8);
   border-radius: 50%;
-  box-shadow: inset 0 25px 0 rgba(#fff, 0.4);
+  box-shadow:
+    inset 0 10px 0 rgba(black, 0.2),
+    inset 0 10px 30px rgba(black, 0.6);
+}
+
+.mole-box {
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 300px;
+  border-radius: 0 0 50% 50% / 15%;
+}
+
+.mole {
+  position: absolute;
+  cursor: pointer;
+  left: 15%;
+  // Animate the bottom property for mole movement
+  bottom: 0;
+  width: 70%;
+  height: 200px;
+  border-radius: 1rem;
+  background: #fff;
+  background-size: cover;
+  animation: mole-demo 2000ms ease-in-out infinite;
+}
+
+@keyframes mole-demo {
+  0% {
+    bottom: -250px;
+  }
+  20% {
+    bottom: 0;
+  }
+  80% {
+    bottom: 0;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+.hide {
+  display: none;
 }
