@@ -25,9 +25,9 @@ function startTimer() {
     }, 1000);
 }
 startTimer();
-startGame() {
-  console.log('Hello from startGame');
-  // scoreCounter = 0;
-  // startTimer();
-  // $('.mole').removeClass(hide)
-}
+// startGame() {
+//   console.log('Hello from startGame');
+//   // scoreCounter = 0;
+//   // startTimer();
+//   // $('.mole').removeClass(hide)
+// }
