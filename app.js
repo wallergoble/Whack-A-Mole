@@ -16,12 +16,14 @@ function updateScore() { // need to make this not highlightable.
 }
 
 function startTimer() {
-  let seconds = 60;              // need to make this a variable later
+  let seconds = 5;              // need to make this a variable later
   console.log('hello from start timer');
   setInterval(function() {
     $('.timer-span').html(seconds); // polish this to not show 60
-    --seconds                   // should this be pre or postfixed?
-    console.log(seconds)
+    --seconds;
+    if (seconds > 0) {
+      return isGameOver = true;
+    }
     }, 1000);
 }
 startTimer();
