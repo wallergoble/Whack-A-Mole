@@ -12,18 +12,19 @@ function hit() { // not very modular
 
 function updateScore() { // need to make this not highlightable.
   console.log("goal")
-  $('.score').html('Score: ' + scoreCounter);
+  $('.score-span').html(scoreCounter);
 }
 
 function startTimer() {
-  let seconds = 60              // need to make this a variable later
+  let seconds = 60;              // need to make this a variable later
+  console.log('hello from start timer');
   setInterval(function() {
-    $('.timer').html('0:' + seconds); // polish this to not show 60
+    $('.timer-span').html(seconds); // polish this to not show 60
     --seconds                   // should this be pre or postfixed?
     console.log(seconds)
     }, 1000);
 }
-
+startTimer();
 startGame() {
   console.log('Hello from startGame');
   // scoreCounter = 0;
