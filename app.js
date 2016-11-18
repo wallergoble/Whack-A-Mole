@@ -1,3 +1,5 @@
+//      ### Scoring Functions ###
+
 let scoreCounter = 0;
 
 $('.mole').on('click', hit);
@@ -15,21 +17,28 @@ function updateScore() { // need to make this not highlightable.
   $('.score-span').html(scoreCounter);
 }
 
+
+//      ### Timer Functions ###
+let seconds = 15;
+let myTimer = null
+
+function showTimer(){
+  if (seconds <= 0){
+    clearInterval(myTimer);
+  }
+  $('.timer-span').html(seconds)
+  seconds--;
+};
+
 function startTimer() {
-  let seconds = 5;              // need to make this a variable later
-  console.log('hello from start timer');
-  setInterval(function() {
-    $('.timer-span').html(seconds); // polish this to not show 60
-    --seconds;
-    if (seconds > 0) {
-      return isGameOver = true;
-    }
-    }, 1000);
+  let myTimer = window.setInterval(showTimer,1000);
 }
-startTimer();
-// startGame() {
-//   console.log('Hello from startGame');
-//   // scoreCounter = 0;
-//   // startTimer();
-//   // $('.mole').removeClass(hide)
-// }
+
+
+//      ### Start Game ###
+function startGame() {
+  console.log('Hello from startGame');
+  scoreCounter = 0;
+  startTimer();
+  $('.mole').removeClass(hide)
+}
