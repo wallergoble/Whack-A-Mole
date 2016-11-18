@@ -12,16 +12,18 @@ function hit() { // not very modular
   setTimeout(function() { $(that).removeClass('hide') }, 1000);
 }
 
-function updateScore() { // need to make this not highlightable.
+function updateScore() {        // need to make this not highlightable.
   console.log("goal")
   $('.score-span').html(scoreCounter);
 }
 
 
 //      ### Timer Functions ###
-let seconds = 15;
-let myTimer = null
 
+let seconds = 60;               // Starting place for the timer
+let myTimer = null;             // This is necessary to clear the interval
+
+// This function increments the timer and dynamically updates the DOM
 function showTimer(){
   if (seconds <= 0){
     clearInterval(myTimer);
@@ -31,14 +33,16 @@ function showTimer(){
 };
 
 function startTimer() {
-  let myTimer = window.setInterval(showTimer,1000);
+  myTimer = window.setInterval(showTimer,1000);
 }
-
 
 //      ### Start Game ###
 function startGame() {
-  console.log('Hello from startGame');
-  scoreCounter = 0;
-  startTimer();
-  $('.mole').removeClass(hide)
+    console.log('Hello from startGame')
+    seconds = 6;
+    scoreCounter = 0;
+    startTimer();
+    $('.mole').removeClass('hide')
 }
+
+// Function that generates a number between 1500 and 3000
