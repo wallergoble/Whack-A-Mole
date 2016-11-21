@@ -2,19 +2,6 @@
 // $small-up: 768px;
 // $large-up: 900px;
 
-body {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: aquamarine;
-  // @include breakpoint($small-up) {
-  //   background: navajowhite;
-  // }
-  // @include breakpoint($large-up) {
-  //   background: navajowhite;
-    // }
-}
 
 
 * {
@@ -24,7 +11,18 @@ body {
 }
 
 body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: aquamarine;
   font-family: 'Roboto', 'Helvetica Neue', Helvetica, sans-serif;
+  // @include breakpoint($small-up) {
+  //   background: navajowhite;
+  // }
+  // @include breakpoint($large-up) {
+  //   background: navajowhite;
+    // }
 }
 
 .container {
@@ -95,7 +93,7 @@ body {
   border-radius: 1rem;
   background: #fff;
   background-size: cover;
-  animation: mole-demo 2000ms ease-in-out infinite;
+  animation: mole-demo 3000ms ease-in-out infinite;
 }
 
 @keyframes mole-demo {
