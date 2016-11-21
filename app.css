@@ -72,12 +72,20 @@ body {
   width: 70%;
   height: 200px;
   border-radius: 1rem;
-  background: #fff;
+  background: #bada55;
   background-size: cover;
-  animation: mole-demo 3000ms ease-in-out infinite;
+  animation: mole-show 2000ms ease-in-out 1;
 }
 
-@keyframes mole-demo {
+.show {
+  animation: mole-show 2000ms ease-in-out 1;
+}
+
+.hide {
+  display: none;
+}
+
+@keyframes mole-show {
   0% {
     bottom: -250px;
   }
@@ -90,8 +98,4 @@ body {
   100% {
     bottom: 0;
   }
-}
-
-.hide {
-  display: none;
 }
