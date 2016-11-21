@@ -55,6 +55,7 @@ let myTimer = null; // This is necessary to clear the interval
 function showTimer() {
     if (seconds <= 0) {
         clearInterval(myTimer);
+        clearInterval(moleInterval);
     }
     $('.timer-span').html(seconds)
     seconds--;
@@ -65,32 +66,13 @@ function startTimer() {
 }
 
 //      ### Start Game ###
+
+var moleInterval = null;
+
 function startGame() {
-    console.log('Hello from startGame')
+    console.log('Hello from startGame');
+    seconds = 30
     scoreCounter = 0;
     startTimer();
-    setInterval(function() {randomHide(molesArray);}, 1000)
-    
-    // randomUnhide('#js-mole-1', 2000, 2000);
-    // randomUnhide('#js-mole-2', 3000, 5000);
-    // randomUnhide('#js-mole-3', 3000, 5000);
-    // randomUnhide('#js-mole-4', 3000, 5000);
-    // randomUnhide('#js-mole-5', 3000, 5000);
-    // randomUnhide('#js-mole-6', 3000, 5000);
-    // endGame();
-}
-
-// Make an end game function
-
-function endGame() {
-    setTimeout(function() {
-        $('div.mole').addClass('hide')
-    }, ((seconds + 2) * 1000))
-}
-
-// Function that generates a number between a range
-function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min)) + min;
+    moleInterval = setInterval(function() {randomHide(molesArray);}, 1100)
 }
