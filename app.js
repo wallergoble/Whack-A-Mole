@@ -2,7 +2,7 @@
 
 var scoreCounter = 0;
 var $moles = $('.mole');
-var molesArray = $moles.toArray();       // Necessary to use forEach to iterate through moles.
+var molesArray = $moles.toArray(); // Necessary to use forEach to iterate through moles.
 let $mole1 = $("#js-mole-1");
 
 function randomHide(moles) {
@@ -50,10 +50,9 @@ function showTimer() {
         $($moles).addClass('hide');
         alert('You whacked ' + scoreCounter + ' moles!');
     } else {
-
-    $('.timer-span').html(seconds)
-    seconds--;
-  }
+        $('.timer-span').html(seconds)
+        seconds--;
+    }
 };
 
 function startTimer() {
@@ -69,6 +68,8 @@ function startGame() {
     seconds = 30;
     scoreCounter = 0;
     startTimer();
-    moleInterval = setInterval(function() {randomHide(molesArray);}, 1000)
+    moleInterval = setInterval(function() {
+        randomHide(molesArray);
+    }, 1000)
     $('#yak-audio')[0].play();
 }
