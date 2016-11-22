@@ -8,11 +8,21 @@
         <link rel="stylesheet" type="text/css" href="app.css">
     </head>
     <body>
+      <audio class="audio" preload="auto" id="boink-audio" data-pad="C">
+              <source src=assets/boink.mp3 type="audio/mp3"/>
+            </audio>
+      <audio class="audio" preload="auto" id="yak-audio" data-pad="C">
+              <source src=assets/yak.wav type="audio/wav"/>
+            </audio>
         <div class="container">
             <header>
                 <button onclick="startGame()">Start</button>
-                <div class="timer">Timer: <span class="timer-span"></span></div>
-                <div class="score">Score: <span class="score-span"></span></div>
+                <div class="timer">Timer:
+                    <span class="timer-span"></span>
+                </div>
+                <div class="score">Score:
+                    <span class="score-span"></span>
+                </div>
             </header>
             <main>
                 <section>
@@ -26,14 +36,20 @@
                     <article>
                         <div class="hole">
                             <div class="mole-box">
-                                <div class="mole hide" id="js-mole-2"></div>
+                                <div class="mole hide" id="js-mole-2">
+
+                                    </audio>
+
+                                </div>
                             </div>
                         </div>
                     </article>
                     <article>
                         <div class="hole">
                             <div class="mole-box">
-                                <div class="mole hide" id="js-mole-3"></div>
+                                <div class="mole hide" id="js-mole-3">
+
+                                </div>
                             </div>
                         </div>
                     </article>
@@ -51,8 +67,8 @@
                             </div>
                         </div>
                     </article>
-                <script src="bower_components/jquery/dist/jquery.js"></script>
-                <script src="app.js"></script>
+                    <script src="bower_components/jquery/dist/jquery.js"></script>
+                    <script src="app.js"></script>
 
                 </body>
             </html>

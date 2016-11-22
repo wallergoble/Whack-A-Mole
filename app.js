@@ -5,24 +5,14 @@ var $moles = $('.mole');
 var molesArray = $moles.toArray();       // Necessary to use forEach to iterate through moles.
 let $mole1 = $("#js-mole-1");
 
-// Helper function to remove hide class on moles.
-function randomUnhide(obj, min, max) {
-    setTimeout(function() {
-        $(obj).removeClass('hide');
-    }, getRandomInt(min, max));
-}
-
 function randomHide(moles) {
     moles.forEach(function(mole) {
-      console.log(mole.className.includes("mole"));
         if (mole.className.includes("hide")) {
             if (Math.random() <= 0.2) {
-                console.log('show');
                 mole.classList.remove("hide");
             }
         } else {
             if (Math.random() <= 0.6) {
-                console.log('hide');
                 mole.classList.add("hide");
             }
         }
@@ -33,6 +23,8 @@ function hit() { // not very modular
     scoreCounter++;
     updateScore();
     $(this).addClass('hide');
+    $('#boink-audio')[0].play();
+
     // let that = this;
     // randomUnhide(that, 3000, 7000);
 }
@@ -41,7 +33,6 @@ $('.mole').on('click', hit);
 
 
 function updateScore() { // need to make this not highlightable.
-    console.log("goal")
     $('.score-span').html(scoreCounter);
 }
 
@@ -53,12 +44,15 @@ let myTimer = null; // This is necessary to clear the interval
 
 // This function increments the timer and dynamically updates the DOM
 function showTimer() {
-    if (seconds <= 0) {
+    if (seconds < 0) {
         clearInterval(myTimer);
         clearInterval(moleInterval);
-    }
+        $($moles).addClass('hide');
+    } else {
+
     $('.timer-span').html(seconds)
     seconds--;
+  }
 };
 
 function startTimer() {
@@ -71,8 +65,9 @@ var moleInterval = null;
 
 function startGame() {
     console.log('Hello from startGame');
-    seconds = 30
+    seconds = 15;
     scoreCounter = 0;
     startTimer();
-    moleInterval = setInterval(function() {randomHide(molesArray);}, 1100)
+    moleInterval = setInterval(function() {randomHide(molesArray);}, 1000)
+    $('#yak-audio')[0].play();
 }
