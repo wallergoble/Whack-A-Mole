@@ -8,11 +8,11 @@ let $mole1 = $("#js-mole-1");
 function randomHide(moles) {
     moles.forEach(function(mole) {
         if (mole.className.includes("hide")) {
-            if (Math.random() <= 0.2) {
+            if (Math.random() <= 0.25) {
                 mole.classList.remove("hide");
             }
         } else {
-            if (Math.random() <= 0.6) {
+            if (Math.random() <= 0.3) {
                 mole.classList.add("hide");
             }
         }
@@ -48,6 +48,7 @@ function showTimer() {
         clearInterval(myTimer);
         clearInterval(moleInterval);
         $($moles).addClass('hide');
+        alert('You whacked ' + scoreCounter + ' moles!');
     } else {
 
     $('.timer-span').html(seconds)
@@ -65,7 +66,7 @@ var moleInterval = null;
 
 function startGame() {
     console.log('Hello from startGame');
-    seconds = 15;
+    seconds = 30;
     scoreCounter = 0;
     startTimer();
     moleInterval = setInterval(function() {randomHide(molesArray);}, 1000)

@@ -32,15 +32,26 @@ body {
         padding: 1.5rem;
         width: 100%;
         flex: 0 1 auto;
+        display: flex;
         min-height: 4rem;
-        background: deepskyblue;
+        background: tomato;
         justify-content: space-between;
         flex-direction: row;
     }
-        div.timer, div.score {
-          background-color: #B4D455;
+    button {
+      border-radius: 20px;
+      padding: 10px;
+    }
+    div.score,
+    div.timer {
+        background-color: #B4D455;
+        padding: 10px;
+        height: 40px;
+        width: 7rem;
+        border-radius: 20px;
+        text-align: center;
+    }
 
-        }
     main {
         padding: 1.5rem;
         flex: 1 1 auto;
@@ -48,19 +59,24 @@ body {
         flex-direction: column;
         justify-content: center;
         align-content: center;
-        background: navajowhite;
+        background: #458B00;
+        background: cover;
 
         section {
             display: flex;
             justify-content: center;
 
             article {
+                cursor: url("assets/mallet.png"), auto;
                 margin: 2rem 1rem;
             }
         }
     }
 }
 //    ###    Mole Styling    ###
+article div {
+  cursor: url("assets/mallet.png"), auto;
+};
 .hole {
     position: relative;
     width: 200px;
@@ -88,9 +104,10 @@ body {
     width: 70%;
     height: 200px;
     border-radius: 1rem;
-    background-image: url(https://pbs.twimg.com/profile_images/1980294624/DJT_Headshot_V2.jpg);
+    background-image: url("https://pbs.twimg.com/profile_images/1980294624/DJT_Headshot_V2.jpg");
     background-size: cover;
     animation: mole-show 2000ms ease-in-out 1;
+    cursor: url("assets/mallet.png"), auto;
 }
 
 .show {
