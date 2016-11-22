@@ -33,16 +33,19 @@ body {
 .container button {
   border-radius: 20px;
   padding: 10px;
+  background-color: #ddd;
 }
 
 .container div.score,
-.container div.timer {
-  background-color: #B4D455;
+.container div.timer,
+.container button {
+  background-color: navajowhite;
   padding: 10px;
   height: 40px;
   width: 7rem;
   border-radius: 20px;
   text-align: center;
+  border: 3px solid #ddd;
 }
 
 .container main {
@@ -52,7 +55,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  background: #458B00;
+  background-image: url("assets/grass.jpg");
   background: cover;
 }
 
