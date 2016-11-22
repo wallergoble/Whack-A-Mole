@@ -39,12 +39,12 @@ function updateScore() { // need to make this not highlightable.
 
 //      ### Timer Functions ###
 
-let seconds = 5; // Starting place for the timer
+let seconds = 30; // Starting place for the timer
 let myTimer = null; // This is necessary to clear the interval
 
 // This function increments the timer and dynamically updates the DOM
 function showTimer() {
-    if (seconds < 0) {
+    if (seconds < 0) {              // When the game ends, do the following
         clearInterval(myTimer);
         clearInterval(moleInterval);
         $($moles).addClass('hide');
