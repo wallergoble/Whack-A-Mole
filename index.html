@@ -9,11 +9,11 @@
     </head>
     <body>
       <audio class="audio" preload="auto" id="boink-audio" data-pad="C">
-              <source src=assets/boink.mp3 type="audio/mp3"/>
-            </audio>
+        <source src=assets/boink.mp3 type="audio/mp3"/>
+      </audio>
       <audio class="audio" preload="auto" id="yak-audio" data-pad="C">
-              <source src=assets/yak.wav type="audio/wav"/>
-            </audio>
+        <source src=assets/yak.wav type="audio/wav"/>
+      </audio>
         <div class="container">
             <header>
                 <button onclick="startGame()">Start</button>
@@ -24,6 +24,7 @@
                     <span class="score-span"></span>
                 </div>
             </header>
+        </div>
             <main>
                 <section>
                     <article>
@@ -67,7 +68,12 @@
                             </div>
                         </div>
                     </article>
-                    <script src="bower_components/jquery/dist/jquery.js"></script>
+                </action>
+            </main>
+                    <script
+                        src="https://code.jquery.com/jquery-3.1.1.min.js"
+                        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+                        crossorigin="anonymous"></script>
                     <script src="app.js"></script>
 
                 </body>

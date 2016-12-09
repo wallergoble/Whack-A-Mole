@@ -13,7 +13,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: aquamarine;
+    background: #faebd7;
     font-family: 'Roboto', 'Helvetica Neue', Helvetica, sans-serif;
     // @include breakpoint($small-up) {
     //   background: navajowhite;
@@ -34,14 +34,15 @@ body {
         flex: 0 1 auto;
         display: flex;
         min-height: 4rem;
-        background: tomato;
+        background: #faebd7;
         justify-content: space-between;
         flex-direction: row;
     }
     button {
-      border-radius: 20px;
+      border-radius: 30px;
+      font-size: 1em;
       padding: 10px;
-      background-color: #ddd;
+      background-color: #00ff00 !important;
     }
     div.score,
     div.timer,
@@ -108,7 +109,11 @@ article div {
     height: 200px;
     border-radius: 1rem;
     background-image: url("https://pbs.twimg.com/profile_images/1980294624/DJT_Headshot_V2.jpg");
+    // background-image: url("assets/molesvg.png");
     background-size: cover;
+    // background-repeat: no-repeat;
+    //
+    background-position: cover;
     animation: mole-show 2000ms ease-in-out 1;
     cursor: url("assets/mallet.png"), auto;
 }
