@@ -10,7 +10,7 @@
 	<li>Atom</li>
 </ul>
 
-<a href="https://wallergoble.github.io/project-one/">Deployed app</a>
+<a href="https://wallergoble.github.io/Whack-A-Mole/">Deployed app</a>
 
 <a href="https://trello.com/b/MyPC1Oa6/project-1">Trello board</a>
 
