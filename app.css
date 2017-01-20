@@ -100,8 +100,8 @@ article div {
   width: 70%;
   height: 200px;
   border-radius: 1rem;
-  background-image: url("https://pbs.twimg.com/profile_images/1980294624/DJT_Headshot_V2.jpg");
-  background-size: cover;
+  background-image: url("assets/molesvg.png");
+  background-size: 100% 100%;
   background-position: cover;
   animation: mole-show 2000ms ease-in-out 1;
   cursor: url("assets/mallet.png"), auto;
