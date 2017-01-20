@@ -21,7 +21,7 @@ The prompt for this project was a front-end only browser game using HTML, CSS, a
 My original wireframe: 
 
 
-![Wireframe](./assets/wireframe.jpg)
+![Wireframe](/assets/wireframe.jpg)
 
 My main goals were: 
 <ul>
